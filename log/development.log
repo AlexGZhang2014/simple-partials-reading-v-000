@@ -875,3 +875,54 @@ Processing by PostsController#show as HTML
   [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
   Rendered authors/_author.html.erb (0.5ms)
   Rendered posts/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 39ms (Views: 17.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/9" for 65.191.0.83 at 2018-07-09 21:44:46 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered authors/_author.html.erb (0.1ms)
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 87ms (Views: 85.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/8" for 65.191.0.83 at 2018-07-09 21:44:49 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered authors/_author.html.erb (0.1ms)
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/7" for 65.191.0.83 at 2018-07-09 21:44:54 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered authors/_author.html.erb (0.1ms)
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/7/edit" for 65.191.0.83 at 2018-07-09 21:44:57 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered posts/_form.html.erb (0.4ms)
+  Rendered posts/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/posts/7" for 65.191.0.83 at 2018-07-09 21:45:14 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8qEM4ZLy12BXQZ4jt+z2OTCsaMK8nnZheMnJB8+6ggjrLg/W/lg2yKKboX01a7TMd3jrNz6LnKIPQrOFARpdtg==", "title"=>"Edited title", "description"=>"This is an edited description", "commit"=>"Submit Post", "id"=>"7"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Edited title"], ["description", "This is an edited description"], ["updated_at", "2018-07-09 21:45:14.017089"], ["id", 7]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Redirected to http://159.203.187.180:56122/posts/7
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms)
