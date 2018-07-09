@@ -856,3 +856,13 @@ Processing by PostsController#create as HTML
   [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
 Redirected to http://159.203.187.180:56122/posts/11
 Completed 302 Found in 38ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/posts/11" for 65.191.0.83 at 2018-07-09 21:44:11 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered authors/_author.html.erb (0.1ms)
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 10.2ms | ActiveRecord: 0.3ms)
